@@ -1,8 +1,6 @@
-https://624590093876.signin.aws.amazon.com/console
 
-access: AKIAZC3DYPY2GJMPGLFT
-secret: 
-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
+
+
 
 
 Windows : 
