@@ -1,0 +1,42 @@
+https://624590093876.signin.aws.amazon.com/console
+
+access key : AKIAZC3DYPY2GJMPGLFT
+secret access key: 
+1lLjOzQcTZH1tSGohzYMAOQxPvc5kgdELcMIB5D/
+
+
+Windows : 
+Administrator
+d8ui4I9QzOB)r;@XdA-*CiU(OAM*tD6G
+
+Ansible credentials via winrm:
+ansible
+P@ssw0rd1234
+
+below in /etc/ansible/hosts
+
+[win]
+172.31.6.129 
+
+[win:vars]
+ansible_user=ansible
+ansible_password=P@ssw0rd1234
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+
+
+ping test to windows remote host:
+ansible win -i hosts -m win_ping
+
+
+Playbook to install and configure IIS : 
+- name: Install IIS on windows instance.
+  gather_facts: true
+  hosts: win
+  tasks:    
+       - win_feature:
+            name: Web-Server
+            state: present
+            restart: yes
+            include_sub_features: yes
+            include_management_tools: yes
