@@ -1,7 +1,7 @@
 https://624590093876.signin.aws.amazon.com/console
 
-access key : AKIAZC3DYPY2GJMPGLFT
-secret access key: 
+access: AKIAZC3DYPY2GJMPGLFT
+secret: 
 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
 
 
